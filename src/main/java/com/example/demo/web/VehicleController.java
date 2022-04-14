@@ -91,7 +91,7 @@ public class VehicleController {
 	// postman pat(h) "/getVeesByDoors/{doors}"
 	@GetMapping("/getVeesByDoors/{doors}")
 	public ResponseEntity<List<Vehicle>> getVehicleByDoors(@PathVariable Integer doors) {
-		List<Vehicle> found = this.service.getVeesByWheels(doors);
+		List<Vehicle> found = this.service.getVeesByDoors(doors);
 		return ResponseEntity.ok(found);
 	}
 
